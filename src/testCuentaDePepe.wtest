@@ -1,4 +1,4 @@
-import cuentas.cuentaDePepe
+import cuentas.*
 
 describe "cuenta de pepe" {
 	test "el saldo inicial es 0" {
@@ -14,5 +14,9 @@ describe "cuenta de pepe" {
 		cuentaDePepe.depositar(100)
 		cuentaDePepe.extraer(20)
 		assert.equals(80, cuentaDePepe.saldo())
+	}
+	
+	test "no me deja extraer mas que mi saldo"{
+		assert.throwsException(cuentaDePepe.extraer(10))
 	}
 }
