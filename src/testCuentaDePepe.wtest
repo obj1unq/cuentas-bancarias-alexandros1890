@@ -17,6 +17,6 @@ describe "cuenta de pepe" {
 	}
 	
 	test "no me deja extraer mas que mi saldo"{
-		assert.throwsException(cuentaDePepe.extraer(10))
+		assert.throwsException({cuentaDePepe.extraer(10)})
 	}
 }
